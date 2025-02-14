@@ -3,6 +3,11 @@ import cv2
 import numpy as np
 import tensorflow as tf
 from PIL import Image
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+import tensorflow as tf
+
 
 # Load the trained model
 model = tf.keras.models.load_model("cnn_bilstm_raw.keras")
